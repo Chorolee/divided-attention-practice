@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>직전 자극 기억하기 · 150문항</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Malgun Gothic',sans-serif;color:#1b3040;background:#eef3f6;font-synthesis:none}*{box-sizing:border-box}body{margin:0;padding:32px 18px}main{max-width:780px;margin:auto}.eyebrow{font-size:12px;letter-spacing:2px;color:#53717d;font-weight:800}h1{font-size:clamp(27px,5vw,40px);margin:12px 0}p{line-height:1.75;color:#526773}section{background:#fff;border:1px solid #dce6eb;border-radius:24px;padding:28px;margin-top:22px;box-shadow:0 12px 40px #233d4c08}.rules,.actions,.metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rule{background:#f2f7f8;border-radius:16px;padding:18px;line-height:1.7}.rule strong{display:block;color:#164f5b;margin-bottom:6px}button{font:inherit;cursor:pointer;border:1px solid #b6cbd3;background:#fff;color:#193d4a;border-radius:13px;padding:14px 20px;font-weight:700;touch-action:manipulation}button:hover:not(:disabled){background:#edf7f8}button:focus-visible{outline:3px solid #e5a537;outline-offset:4px}button:disabled{opacity:.45;cursor:default}.primary{background:#146b70;color:white;border-color:#146b70}.primary:hover:not(:disabled){background:#11585c}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.note{font-size:13px}.topline{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:700}.track{height:7px;border-radius:6px;background:#e5edef;margin:16px 0;overflow:hidden}.fill{height:100%;background:#18838a;width:0;transition:width .15s}.stage{height:235px;display:grid;place-items:center;background:#f7fafb;border-radius:18px;margin:20px 0}.shape{width:108px;height:108px;background:#254c65}.circle{border-radius:50%}.triangle{clip-path:polygon(50% 0,100% 100%,0 100%)}.diamond{transform:rotate(45deg);width:82px;height:82px}.actions button{min-height:88px;font-size:18px}.actions small{display:block;font-size:12px;font-weight:500;margin-top:7px}.actions .selected{background:#d9f2ec;border-color:#2a8a76;color:#146451}.status{text-align:center;min-height:26px;font-size:14px;color:#58737e;margin:12px 0}.metric{background:#f1f7f8;border-radius:14px;padding:18px}.metric b{font-size:32px;display:block;margin-top:8px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px;white-space:nowrap}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid #e2e9ed}th{color:#52717e}details{margin-top:22px}summary{cursor:pointer;font-weight:700}.hidden,[hidden]{display:none!important}footer{text-align:center;color:#6a7d86;font-size:12px;margin:24px 0}.check{display:flex;align-items:center;gap:9px;margin-top:20px;line-height:1.5}.check input{width:20px;height:20px;accent-color:#146b70}@media(max-width:520px){body{padding:22px 12px}section{padding:20px}.rules{grid-template-columns:1fr}.stage{height:195px}.actions button{padding:12px 8px}h1{font-size:28px}}
+
+body.testing{background:#000;overflow:hidden;padding:0;cursor:none}
+body.testing main>header,body.testing footer{display:none}
+body.testing #test{position:fixed;inset:0;margin:0;padding:0;border:0;border-radius:0;background:#000;box-shadow:none;z-index:100}
+body.testing #test>*{display:none!important}
+body.testing #test #stage{display:grid!important;position:absolute;inset:0;width:100%;height:100%;margin:0;background:#000;border:0;border-radius:0;color:#fff;touch-action:manipulation}
+body.testing .shape{background:#fff}
+body.testing .shape.stimulus-off{visibility:hidden}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">DIVIDED ATTENTION / 150 TRIALS</div><h1>직전 자극과 같으면, 스페이스</h1><p>도형과 소리를 동시에 기억하세요.<br>도형 4종 · 소리 4종 · 150문항 · 약 5분</p></header>
+<section id="intro"><div class="rules"><div class="rule"><strong>눈으로 비교하기</strong>현재 도형이 <b>바로 직전 도형</b>과 같은가요?<br>● 원 / ■ 사각형 / ▲ 삼각형 / ◆ 마름모</div><div class="rule"><strong>귀로 비교하기</strong>현재 소리가 <b>바로 직전 소리</b>와 같은가요?<br>종소리 / 새 지저귐 / 나무 두드림 / 전자음</div></div>
+<p>둘 중 <b>하나라도 직전 자극과 같으면 스페이스바</b>를 한 번 누르세요. 둘 다 같아도 한 번만 누릅니다. 둘 다 다르면 누르지 마세요. <b>첫 문항은 기억만 하고 누르지 않습니다.</b></p>
+<p class="note">예: 원·종소리 → 삼각형·종소리라면 소리가 같으므로 누릅니다. → 원·새 지저귐라면 직전의 삼각형·종소리와 모두 다르므로 누르지 않습니다.</p>
+<p class="note">시작하면 검은 화면에 도형만 잠깐 나타납니다. 도형은 0.3초, 소리는 약 0.25초 이내로 제시되며 2초마다 다음 문항이 나옵니다. 사라진 뒤에도 다음 문항 전까지 응답할 수 있습니다. 스페이스바로 응답하고, <b>Esc 키로 중단</b>하세요. 터치 기기에서는 화면을 한 번 누르면 됩니다.</p>
+<details><summary>참고 자료와 연습용 설정</summary><p class="note"><a href="https://jamanetwork.com/journals/jamapediatrics/fullarticle/1107586" target="_blank" rel="noopener">JAMA Pediatrics 연구</a>는 분할주의력에서 시각·청각 자극을 2초마다 동시에 제시하고 직전 자극과 비교한다고 설명합니다. <a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1426376/full" target="_blank" rel="noopener">Frontiers 연구 Figure 2</a>는 다른 CAT 하위검사의 검은 배경을 보여줍니다. 분할주의력의 정확한 노출 시간은 확인하지 못했으므로, 도형 0.3초·합성 소리 약 0.25초 이내는 이 연습용으로 정한 값입니다. 150문항으로 구성한 연습용이며, 자극·노출 시간·채점 규준은 공식 검사와 동일하지 않습니다.</p></details>
+<div class="buttons" id="samples"><button data-tone="0">종소리 듣기</button><button data-tone="1">새 지저귐 듣기</button><button data-tone="2">나무 두드림 듣기</button><button data-tone="3">전자음 듣기</button></div>
+<p id="audioStatus" role="status" class="note">기기 소리를 켜고 네 가지 소리를 모두 확인하세요.</p><label class="check"><input id="confirmed" type="checkbox">네 가지 소리를 들었고 구분할 수 있습니다.</label><div class="buttons"><button id="start" class="primary" disabled>150문항 시작</button></div>
+<p class="note">요청하신 규칙을 구현한 연습용 과제입니다. 공식 CAT 검사와 자극·시간·채점 규준이 동일한 검사가 아니며, 진단이나 정상·비정상 판정에 사용할 수 없습니다.</p></section>
+<section id="test" hidden><div class="topline"><span id="round"></span><span id="timer"></span></div><div class="track"><div class="fill" id="progress"></div></div><div class="stage" id="stage"></div>
+<button id="respond" style="width:100%;min-height:88px;font-size:20px" disabled>직전과 같아요 · SPACE</button><div id="status" class="status" role="status"></div><p class="note" style="text-align:center">도형 또는 소리 중 하나라도 직전과 같으면 한 번 누르세요.</p><button id="stop">중단하고 처음으로</button></section>
+<section id="result" hidden><div class="eyebrow">YOUR RESULTS</div><h2>150문항을 완료했어요</h2><p>첫 문항은 기억용으로 제외하고, 2~150번의 149개 비교 응답을 채점했습니다.</p><div class="metrics"><div class="metric">전체 정확도<b id="score"></b></div><div class="metric">평균 반응 시간<b id="speed"></b></div></div><div class="tablewrap"><table><thead><tr><th>기록</th><th>결과</th></tr></thead><tbody id="summary"></tbody></table></div><p class="note">정확도 = (정확한 누름 + 정확한 기다림) ÷ 149. 반응 시간은 자극 제시부터 정확한 누름까지 측정하며 기기 지연이 포함될 수 있습니다.</p><details><summary>문항별 결과 보기</summary><div class="tablewrap"><table><thead><tr><th>문항</th><th>도형</th><th>소리</th><th>직전과 같은 항목</th><th>내 응답</th><th>결과</th></tr></thead><tbody id="trials"></tbody></table></div></details><p class="note">결과에는 임상적 판정 기준이나 또래 비교 점수가 없습니다. 소음, 기기, 연습 여부에 따라 달라질 수 있습니다.</p><div class="buttons"><button id="restart" class="primary">다시 하기</button></div></section>
+<footer>인터넷 연결 없이 실행 · 결과를 외부로 전송하거나 저장하지 않습니다.</footer></main>
+<script>
+'use strict';
+const TOTAL_TRIALS=150, TRIAL_MS=2000, STIMULUS_MS=300;
+const $=id=>document.getElementById(id),shapeIds=['circle','square','triangle','diamond'],names=['원','사각형','삼각형','마름모'],soundNames=['종소리','새 지저귐','나무 두드림','전자음'];
+let ctx,node,phase='intro',rounds=[],answers=[],index=0,response=null,started=0,deadline=0,frame=0,later=0,seen=new Set(),busy=false;
+async function initAudio(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw Error('unsupported');if(!ctx)ctx=new AC();await ctx.resume();if(ctx.state!=='running')throw Error('suspended');}
+function stopSound(){if(node){try{node.stop();}catch{}node=null;}}
+function play(tone){
+ stopSound();const voices=[],base=ctx.currentTime+.025;
+ // Repeated identities use the same synthesized sound every time.
+ function voice(type,freq,offset,duration,volume,endFreq){
+  offset*=.5;duration*=.5;
+  const o=ctx.createOscillator(),g=ctx.createGain(),t=base+offset;
+  o.type=type;o.frequency.setValueAtTime(freq,t);
+  if(endFreq)o.frequency.exponentialRampToValueAtTime(endFreq,t+duration*.8);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(volume,t+.006);
+  g.gain.exponentialRampToValueAtTime(.0001,t+duration);
+  o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+duration+.01);
+  o.onended=()=>{o.disconnect();g.disconnect();};voices.push(o);
+ }
+ if(tone===0){ // Bell: a decaying metallic chord.
+  voice('sine',880,0,.48,.16);voice('sine',1848,0,.34,.065);voice('sine',2640,0,.22,.028);
+ }else if(tone===1){ // Bird: two rising chirps.
+  voice('sine',1250,0,.17,.16,2500);voice('sine',1500,.23,.19,.15,3000);
+ }else if(tone===2){ // Wood: two short, hollow knocks.
+  for(const offset of [0,.23]){voice('sine',620,offset,.08,.27,220);voice('triangle',1250,offset,.035,.07,650);}
+ }else{ // Electronic buzzer: low, falling sawtooth pulses.
+  voice('sawtooth',210,0,.18,.085,140);voice('sawtooth',210,.23,.18,.085,140);
+ }
+ node={stop(){voices.forEach(o=>{try{o.stop();}catch{}});}};
+}
+function ready(){$('start').disabled=seen.size!==4||!$('confirmed').checked||busy;}
+async function demo(tone){if(busy)return;busy=true;ready();document.querySelectorAll('[data-tone]').forEach(b=>b.disabled=true);try{await initAudio();play(tone);seen.add(tone);$('audioStatus').textContent=soundNames[tone]+'를 재생했습니다. ('+seen.size+'/4 확인)';}catch{$('audioStatus').textContent='소리를 재생할 수 없습니다. 최신 브라우저에서 다시 열어주세요.';}setTimeout(()=>{busy=false;document.querySelectorAll('[data-tone]').forEach(b=>b.disabled=false);ready();},650);}
+document.querySelectorAll('[data-tone]').forEach(b=>b.onclick=()=>demo(Number(b.dataset.tone)));$('confirmed').onchange=ready;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+const random4=()=>Math.floor(Math.random()*4),different=n=>(n+1+Math.floor(Math.random()*3))%4;
+function build(){const conditions=shuffle([...Array(30).fill('v'),...Array(30).fill('a'),...Array(15).fill('both'),...Array(TOTAL_TRIALS-76).fill('none')]);const out=[{shape:random4(),tone:random4(),v:false,a:false,target:false}];for(const c of conditions){const prev=out[out.length-1],v=c==='v'||c==='both',a=c==='a'||c==='both';out.push({shape:v?prev.shape:different(prev.shape),tone:a?prev.tone:different(prev.tone),v,a,target:v||a});}return out;}
+function clear(){clearTimeout(later);cancelAnimationFrame(frame);stopSound();}
+function home(message=''){clear();document.body.classList.remove('testing');phase='intro';$('intro').hidden=false;$('test').hidden=$('result').hidden=true;if(message)$('audioStatus').textContent=message;ready();}
+function prepare(){phase='gap';$('respond').disabled=true;$('stage').replaceChildren();later=setTimeout(next,1500);}
+function next(){if(ctx.state!=='running'){home('오디오가 중단되었습니다. 소리를 다시 확인하고 시작하세요.');return;}phase='trial';response=null;const el=document.createElement('div');el.className='shape '+shapeIds[rounds[index].shape];el.setAttribute('role','img');el.setAttribute('aria-label',names[rounds[index].shape]);$('stage').replaceChildren(el);$('round').textContent='문항 '+(index+1)+' / '+TOTAL_TRIALS;$('status').textContent=index===0?'기억만 하세요. 첫 문항은 채점하지 않습니다.':'도형 또는 소리가 직전과 같은가요?';$('respond').disabled=false;started=performance.now();deadline=started+TRIAL_MS;play(rounds[index].tone);tick();}
+function tick(){if(phase!=='trial')return;const remaining=Math.max(0,deadline-performance.now());if(TRIAL_MS-remaining>=STIMULUS_MS&&$('stage').firstElementChild)$('stage').firstElementChild.classList.add('stimulus-off');$('timer').textContent=(remaining/1000).toFixed(1)+'초';$('progress').style.width=((index+1-remaining/TRIAL_MS)/TOTAL_TRIALS*100)+'%';if(remaining===0){answers.push({...rounds[index],response});index++;if(index===TOTAL_TRIALS)finish();else next();}else frame=requestAnimationFrame(tick);}
+function respond(){if(phase!=='trial'||performance.now()>=deadline||response!==null)return;response=Math.round(performance.now()-started);$('respond').disabled=true;$('respond').style.background='#d9f2ec';$('respond').textContent='응답 기록됨';$('status').textContent=index===0?'첫 문항의 응답은 채점하지 않습니다.':'응답을 기록했습니다.';}
+$('respond').onclick=respond;$('stage').onclick=respond;document.addEventListener('keydown',e=>{if(e.code==='Escape'&&(phase==='trial'||phase==='gap')){e.preventDefault();home('검사를 중단했습니다. 처음부터 다시 시작할 수 있습니다.');return;}if(e.code==='Space'&&(phase==='trial'||phase==='gap')){e.preventDefault();if(!e.repeat&&!e.ctrlKey&&!e.altKey&&!e.metaKey)respond();}});
+$('start').onclick=async()=>{if($('start').disabled)return;$('start').disabled=true;try{await initAudio();}catch{home('소리를 시작할 수 없습니다. 소리 확인을 다시 해주세요.');return;}rounds=build();answers=[];index=0;$('progress').style.width='0';$('intro').hidden=$('result').hidden=true;$('test').hidden=false;document.body.classList.add('testing');if(document.activeElement)document.activeElement.blur();prepare();};
+function summarize(rows){let hit=0,miss=0,falseAlarm=0,correctWait=0,times=[];for(const r of rows){const pressed=r.response!==null;if(r.target&&pressed){hit++;times.push(r.response);}else if(r.target)miss++;else if(pressed)falseAlarm++;else correctWait++;}return{hit,miss,falseAlarm,correctWait,accuracy:Math.round((hit+correctWait)/rows.length*100),speed:times.length?Math.round(times.reduce((a,b)=>a+b,0)/times.length)+' ms':'—'};}
+function verdict(r,i){if(!i)return '채점 제외';return r.target?(r.response===null?'놓침':'정확한 누름'):(r.response===null?'정확한 기다림':'오반응');}
+function finish(){clear();document.body.classList.remove('testing');phase='result';$('test').hidden=true;$('result').hidden=false;const s=summarize(answers.slice(1));$('score').textContent=s.accuracy+'%';$('speed').textContent=s.speed;$('summary').innerHTML=[['정확한 누름',s.hit+' / '+(s.hit+s.miss)],['정확한 기다림',s.correctWait+' / '+(s.correctWait+s.falseAlarm)],['놓침',s.miss],['오반응',s.falseAlarm]].map(([k,v])=>'<tr><td>'+k+'</td><td>'+v+'</td></tr>').join('');$('trials').innerHTML=answers.map((r,i)=>'<tr><td>'+(i+1)+'</td><td>'+names[r.shape]+'</td><td>'+soundNames[r.tone]+'</td><td>'+(!i?'—':r.v&&r.a?'도형 + 소리':r.v?'도형':r.a?'소리':'없음')+'</td><td>'+(r.response===null?'안 누름':'누름')+'</td><td>'+verdict(r,i)+'</td></tr>').join('');$('result').scrollIntoView({behavior:'smooth'});}
+$('stop').onclick=()=>home('검사를 중단했습니다. 처음부터 다시 시작할 수 있습니다.');$('restart').onclick=()=>home();document.addEventListener('visibilitychange',()=>{if(document.hidden&&(phase==='trial'||phase==='gap'))home('다른 탭으로 이동하여 검사를 중단했습니다. 처음부터 다시 시작하세요.');});
+</script></body></html>
